@@ -112,7 +112,7 @@ namespace AAPM.Controllers
                         if (Res.IsSuccessStatusCode)
                         {
                             ViewBag.Message = "Updated";
-                            return View();
+                            return RedirectToAction("Index");
                         }
 
                     }
