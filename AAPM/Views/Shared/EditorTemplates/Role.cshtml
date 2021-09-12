@@ -1,0 +1,14 @@
+﻿@using AAPM.Enum;
+
+@{
+    var RoleMaster = new SelectList(Enum.GetValues(typeof(RoleTypeEnum)).Cast<RoleTypeEnum>().Select(v => new SelectListItem
+    {
+        Text = v.ToString(),
+        Value = ((int)v).ToString()
+    }).ToList(), "Value", "Text");
+}
+
+@Html.DropDownListFor(m => m,RoleMaster,"Select Role",new {@class="form-control" })
+
+            
+
